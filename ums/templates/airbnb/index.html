@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block body_block %}
+<!-- <div class="container"> -->
+  <!-- <div class="jumbotron"> -->
+    
+    {% if pagecontents %}
+      <ul>
+        {% for content in pagecontents %}
+          {% if content.image %}
+          <img src="{{content.image.url}}" height="300"/>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>There is no content available</p>
+    {% endif %}
+    <div class="col-md-12" style="padding: 4%;">
+      <h3 style="font-family: cursive;">Our Technologies</h3>
+      {% if pagecontents %}
+        <ul>
+          {% for content in pagecontents %}
+            <li style="font-family: cursive;">{{content.title}}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>There is no content available</p>
+      {% endif %}
+    </div>
+  <!-- </div> -->
+<!-- </div> -->
+{% endblock %}

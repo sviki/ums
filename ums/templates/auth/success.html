@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body_block %}
+  <div class="container">
+    <div class="jumbotron">
+      <p>User <b>{{user.username}}</b> is logged in successfully.</p>
+<form method="post" action="/logout/">
+          {% csrf_token %}
+          
+<input type="submit" name="" value="Logout">
+</form>
+</div>
+  </div>
+{% endblock %}

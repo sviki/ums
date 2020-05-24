@@ -1,0 +1,8 @@
+db.sqlite3
+__pycache__
+.vscode
+.project
+static
+media
+whoosh_index
+migrations
